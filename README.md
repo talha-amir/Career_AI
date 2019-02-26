@@ -1,5 +1,7 @@
 # Career_AI
-Machine Learning on prediction of careers based on personality traits
+Machine Learning on prediction of careers based on personality traits. 
+
+Model uses scikitlearn with Python.
 
 I am in charge of ML with another teammate for a senior capstone project to predict a person's 
 best career choice and optimize their success through monitoring their weaknesses. 
