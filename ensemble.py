@@ -41,15 +41,6 @@ labels = numpy_array[:,6]
 #labels = df.target
 print(labels.shape)
 print(features.shape)
-#print("Number of entries:", len(features))
-#for featurename in personality.feature_names:
-#    print(featurename[:10],"    \t")
-#print("Class")
-#for feature, label in zip(features, labels):
- #   for f in feature:
-  #      print(f, "\t\t"),
-   # print(label)
-
 train_feats, test_feats, train_labels, test_labels = tts(features, labels, test_size=0.8)
 
 #Model for ML 
@@ -74,10 +65,7 @@ predictions = clf.predict(test_feats)
 
 print("\n Predictions: ", predictions)
 
-score = 0
-for i in range(len(predictions)):
-    if predictions[i] == test_labels[i]:
-        score += 1
+score = sum(predictions[i] == test_labels[i] for i in range(len(predictions)))
 print((score/len( predictions)) * 100, "%")
 
 
